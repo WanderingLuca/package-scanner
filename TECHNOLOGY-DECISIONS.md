@@ -1,4 +1,4 @@
-# 🧠 Technology Decisions & Rationale
+# Technology Decisions & Rationale
 
 This project was built with a focus on performance, developer experience, and scalability. Below is an explanation of the key technologies used and the rationale behind their selection.
 
@@ -20,7 +20,7 @@ In summary, Vite provides an extremely fast development environment and a simple
 
 **Vite** was chosen as the build tool for its blazing-fast development server, instant module hot reloading, and optimized build pipeline. Vite uses native ES modules in development and leverages `esbuild` under the hood for lightning-fast transpilation, making it a perfect fit for modern React projects.
 
-### 🎨 Radix UI / Radix Themes
+### Radix UI / Radix Themes
 
 **Radix UI** and **Radix Themes** offer a collection of accessible, unstyled primitives and a consistent design system for building high-quality UIs without getting locked into a specific styling approach. This allows full design flexibility while guaranteeing accessibility best practices.
 
@@ -30,7 +30,7 @@ In summary, Vite provides an extremely fast development environment and a simple
 - They enable consistent spacing, typography, and color tokens out of the box.
 - Great for projects that aim to scale or integrate design tokens later.
 
-### 🔁 TanStack Query (React Query)
+### TanStack Query (React Query)
 
 **TanStack Query** (formerly React Query) was selected to handle all server state logic, including:
 
@@ -40,7 +40,7 @@ In summary, Vite provides an extremely fast development environment and a simple
 
 This eliminated the need for boilerplate API handling logic and provided automatic cache updates, retry behavior, and granular control over request lifecycles. In this project, `React Query` acted as the API layer and remote state manager without needing a dedicated state management library.
 
-### ❌ Why No Global State Library (Redux, Zustand, etc.)?
+### Why No Global State Library (Redux, Zustand, etc.)?
 
 For this scope, a dedicated state management library was unnecessary. The app primarily deals with server state (API data), which is efficiently handled by **TanStack Query**.
 
@@ -56,6 +56,6 @@ We can extend the architecture using:
 - `Redux` or `Zustand` for complex app-wide shared state.
 - Compound components pattern to manage scoped shared behavior elegantly.
 
-### 🧪 react-json-tree
+### react-json-tree
 
 Used to visualize raw API responses in a readable and interactive JSON format. This is especially helpful given that the primary users of the Package Security Scanner are developers who are already familiar with JSON structures. This approach may evolve in the future if a more tailored UI for data presentation is introduced.
