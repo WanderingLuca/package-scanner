@@ -20,7 +20,7 @@ export interface FetchError extends Error {
   response?: Response;
 }
 
-const API_URL = '/api/public/ecosystems';
+const API_URL = `${import.meta.env.VITE_API_BASE_URL}/ecosystems`;
 
 /**
  * Fetches vulnerabilities for a specific package in an ecosystem.
