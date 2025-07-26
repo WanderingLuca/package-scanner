@@ -146,6 +146,7 @@ If you are developing a production application, we recommend updating the config
 - Fetch hooks are designed based on tanstac best practices and explained to AI withe docs to ve generated.
 - Tests for hooks is not provided due to time constraints.
 - Interfaces and types used could have terre own small library being generated automatically from swaggger.
+- A proper UI color palette and more structured UI components with standardization (e.g., using styled-components) were not implemented.
 
 # What you would improve with more time
 

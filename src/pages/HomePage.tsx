@@ -24,6 +24,7 @@ const HomePage: React.FC = () => {
 
   const handleEcosystemChange = (value: Ecosystem) => {
     setEcosystem(value);
+    setSelectedPackage(undefined);
   };
 
   return (

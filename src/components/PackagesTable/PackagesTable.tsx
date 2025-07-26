@@ -11,6 +11,7 @@ const PackagesTable: React.FC<PackagesTableProps> = ({
   ecosystem,
   setSelectedPackage,
 }) => {
+  const [selectedRow, setSelectedRow] = useState<string | null>(null);
   const [page, setPage] = useState(1);
 
   const { data, isLoading, isError, error } = useFetchPackages(
@@ -21,6 +22,7 @@ const PackagesTable: React.FC<PackagesTableProps> = ({
 
   const handleAnalyze = (packageName: string) => {
     setSelectedPackage(packageName);
+    setSelectedRow(packageName);
   };
 
   return (
@@ -48,7 +50,15 @@ const PackagesTable: React.FC<PackagesTableProps> = ({
               </Table.Header>
               <Table.Body>
                 {data.packages.map((pkg) => (
-                  <Table.Row key={pkg.id}>
+                  <Table.Row
+                    key={pkg.id}
+                    style={{
+                      backgroundColor:
+                        selectedRow === pkg.name
+                          ? 'color(display-p3 0.21 0.21 0.25)'
+                          : 'transparent',
+                    }}
+                  >
                     <Table.Cell
                       width='80%'
                       style={{

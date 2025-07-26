@@ -40,7 +40,7 @@ const fetchVulnerabilities = async (
 
   if (response.status === 404) {
     return {
-      detail: 'No vulnerabilities found for the specified package.',
+      detail: `No vulnerabilities found for the specified package. ${packageName} in ${ecosystem}.`,
       vulnerabilities: [],
     };
   }

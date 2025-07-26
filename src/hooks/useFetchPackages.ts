@@ -30,7 +30,7 @@ const API_URL = '/api/public/ecosystems';
 const fetchPackages = async (
   ecosystem: string,
   offset: number,
-  limit: number = 20
+  limit: number = 20 // Limit is by default 20 but API is ignoring this and returning 100
 ): Promise<FetchPackagesResponse> => {
   const response = await fetch(
     `${API_URL}/${ecosystem}/packages?offset=${offset}&limit=${limit}`
