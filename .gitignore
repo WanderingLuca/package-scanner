@@ -1,0 +1,5 @@
+node_modules
+
+# Jest coverage output
+coverage/
+dist/
