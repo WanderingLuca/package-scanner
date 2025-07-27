@@ -5,7 +5,7 @@ import { Ecosystem } from '../constants/ecosystem';
 import { useFetchVulnerabilities } from '../hooks/useFetchVulnerabilities';
 
 import EcosystemSelect from '../components/EcosystemSelect/EcosystemSelect';
-import PaginatedTable from '../components/PackagesTable/PackagesTable';
+import PackagesTable from '../components/PackagesTable/PackagesTable';
 import VulnerabilitiesViewer from '../components/VulnerabilitiesViewer/VulnerabilitiesViewer';
 
 import './HomePage.css';
@@ -37,7 +37,7 @@ const HomePage: React.FC = () => {
           </Flex>
 
           {ecosystem ? (
-            <PaginatedTable
+            <PackagesTable
               ecosystem={ecosystem}
               setSelectedPackage={setSelectedPackage}
             />
